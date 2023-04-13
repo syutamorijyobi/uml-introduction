@@ -1,5 +1,5 @@
 @startuml ユースケース図
-' left to right direction
+left to right direction
 actor 利用者 #BBB000;line:Blue;line.bold;
 package 携帯システム {
 usecase 連絡先を登録する
