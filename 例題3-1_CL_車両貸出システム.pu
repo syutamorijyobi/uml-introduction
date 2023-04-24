@@ -5,18 +5,31 @@ class 空車リスト {
 - 日時:String
 }
 class 車 {
--車番号:int
+- 貸出料金:int
+- 車番号:int
 - 車種:String
 - 駆動方式:String
 - 状態空車、予約済み、貸出中等:String
 }
 class 顧客 {
+- 顧客ID:int
 - 顧客名:String
+- 電話番号:String
+- 郵便番号:String
+- 住所:String
 }
 class 予約 {
-+ 予約番号:int
+- 顧客ID:int
+- 予約番号:int
+- 車番号
+- 予約日時:String
++予約():void
 }
 class 貸出 {
+-貸出番号
+-貸出日時:String
+-車番号
+-返却日時:String
 + 貸出():void
 }
 @enduml
