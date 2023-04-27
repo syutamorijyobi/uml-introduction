@@ -1,0 +1,56 @@
+@startuml 例題
+left to right direction
+' class 会社{}
+' class 社員 {}
+' 会社-->社員:雇う
+' 会社 "0..1"--"*"社員
+' note left of 会社:雇用者
+' note right of 社員:従業員
+' right or left or top
+' パソコン"1" *-- ハードディスク
+' note right of パソコン
+' ハードディスクがないと成り立ちません。
+' end note
+
+' class 社員{
+' - 社員ID
+' - 社員名
+' ---
+' + 社員ID設定（社員ID:int）:void
+' + 社員ID取得（）:int
+' + 社員名設定（社員名:String）:void
+' + 社員名取得（）:String
+' }
+' class 技術社員{
+' - プロジェクト名:String
+' ---
+' + プロジェクト名設定（プロジェクト名:String）:void
+' + プロジェクト名取得（）:String
+' }
+' class 営業社員{
+' - 担当地域名:String
+' ---
+' + 担当地域名設定（プロジェクト名:String）:void
+' + 担当地域名取得（）:String
+' }
+' 社員<|--down- 技術社員
+' 社員<|--down- 営業社員
+    class Animal {
+---
++ Walk:void
++ {abstract} eat():int
++ {abstract} cry():void
+}
+class Dog {
+---
++ eat():int
++ cry():void
+}
+class Cat {
+---
++ eat():int
++ cry():void
+}
+Animal <|-down- Dog
+Animal <|-down- Cat
+@enduml
