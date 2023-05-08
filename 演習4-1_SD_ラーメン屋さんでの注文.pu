@@ -5,7 +5,7 @@ participant ":フロア店員" as clerk
 participant ":料理人" as cooker
 mainframe sd ラーメン屋さん
 activate guest 
-guest -> boundary : ラーメンを注文する
+guest -> clerk : ラーメンを注文する
 activate clerk
 clerk ->cooker:料理を指示する
 activate cooker
