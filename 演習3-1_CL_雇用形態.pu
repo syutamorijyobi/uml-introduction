@@ -1,0 +1,18 @@
+@startuml 演習3-1
+class 社員 {
+- 名前:String
+- 雇用形態: String
+}
+class 契約社員{
+
+}
+class 派遣{
+
+}
+class 正社員{
+
+}
+社員 <|-down- 派遣
+社員 <|-down- 契約社員
+社員 <|-down- 正社員
+@enduml

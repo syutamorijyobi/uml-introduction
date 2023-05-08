@@ -1,0 +1,24 @@
+@startuml 演習3-2
+left to right direction
+class 患者{
+    -患者ID:int
+    -担当医ID:int
+    -名前:String
+}
+class 医師{
+    -医師ID:int
+    -名前:String
+    -医局:String
+}
+class 医局{
+    局:String
+}
+class 診察記録{
+    -患者ID:int
+    -診察記録:String
+}
+医師 --> 診察記録:診察 >
+診察記録 "*"--"*" 患者
+医局 "1"--"*" 医師
+患者 "*"--"1" 医師
+@enduml

@@ -35,22 +35,42 @@ left to right direction
 ' }
 ' 社員<|--down- 技術社員
 ' 社員<|--down- 営業社員
-    class Animal {
----
-+ Walk:void
-+ {abstract} eat():int
-+ {abstract} cry():void
+'     class Animal {
+' ---
+' + Walk:void
+' + {abstract} eat():int
+' + {abstract} cry():void
+' }
+' class Dog {
+' ---
+' + eat():int
+' + cry():void
+' }
+' class Cat {
+' ---
+' + eat():int
+' + cry():void
+' }
+' Animal <|-down- Dog
+' Animal <|-down- Cat
+' left to right direction
+object "<u>空車リスト2: 空車リスト</u>" as k2 {
+日付
 }
-class Dog {
----
-+ eat():int
-+ cry():void
+object "<u>空車リスト1: 空車リスト</u>" as k1 {
+日付
 }
-class Cat {
----
-+ eat():int
-+ cry():void
+object "<u>車情報1: 車</u>" as car1 {
+管理番号=5
+車種
+貸出料金
 }
-Animal <|-down- Dog
-Animal <|-down- Cat
+object "<u>車情報2: 車</u>" as car2 {
+管理番号=6
+車種
+貸出料金
+}
+k1 -- car1
+k1 -- car2
+k2 -- car1
 @enduml
