@@ -1,3 +1,11 @@
 @startuml kuruma
-
+left to right direction
+object "<u>車情報1:車</u>" as  a{
+ 車番号
+ 車種
+ 駆動方式
+}
+object "<u>車情報2:タイヤ</u>" as b {
+}
+a -- b
 @enduml

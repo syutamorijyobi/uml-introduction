@@ -1,0 +1,20 @@
+@startuml kuruma
+' left to right direction
+object "<u>参照顧客:重要顧客</u>" as  a{
+}
+object "<u>参照顧客:顧客</u>" as b {
+氏名
+}
+object "<u>参照商品:商品</u>" as c {
+商品名
+型式
+}
+object "<u>注文情報:注文</u>" as d {
+注文日
+数量
+}
+b -- a
+a -- c
+b -- c
+c -- d 
+@enduml
