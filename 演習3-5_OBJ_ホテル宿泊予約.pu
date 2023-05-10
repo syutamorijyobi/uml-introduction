@@ -1,0 +1,35 @@
+@startuml ho
+object "<u>ホテルUML:ホテル</u>" as  hotel{
+    部屋
+}
+object "<u>301号室:部屋</u>" as roominfo1{
+    タイプ=ダブル
+    価格=11000
+    キャンペーン価格=9000
+}
+object "<u>302号室:部屋</u>" as roominfo2{
+    タイプ=ダブル
+    価格=11000
+    キャンペーン価格=9000
+}
+object "<u>303号室:部屋</u>" as roominfo3{
+    タイプ=ダブル
+    価格=11000
+    キャンペーン価格=9000
+}
+object "<u>部屋予約:予約</u>" as ro {
+チェックイン日=5/3
+宿泊数=2日
+値段=9000
+}
+object "<u>A:利用者</u>" as a {
+}
+object "<u>B:利用者</u>" as b {
+}
+a -- ro
+b -- ro
+ro -- hotel 
+hotel -- roominfo1
+hotel -- roominfo3
+
+@enduml

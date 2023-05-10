@@ -1,20 +1,52 @@
 @startuml kuruma
 ' left to right direction
-object "<u>参照顧客:重要顧客</u>" as  a{
+object "<u>利用者:重要顧客</u>" as  importuser{
 }
-object "<u>参照顧客:顧客</u>" as b {
-氏名
+object "<u>顧客情報:顧客</u>" as user1 {
+氏名=高橋洋平
 }
-object "<u>参照商品:商品</u>" as c {
-商品名
-型式
+object "<u>顧客情報:顧客</u>" as user2 {
+氏名=高田利恵
 }
-object "<u>注文情報:注文</u>" as d {
-注文日
-数量
+object "<u>顧客情報:顧客</u>" as user3 {
+氏名=大坪直之
 }
-b -- a
-a -- c
-b -- c
-c -- d 
+object "<u>:商品</u>" as product1 {
+商品名=テレビ
+型式=V12345
+}
+object "<u>:商品</u>" as product2 {
+商品名=冷蔵庫
+型式=R8765
+}
+object "<u>:商品</u>" as product3 {
+商品名=プロジェクタ
+型式=P1122
+}
+object "<u>注文情報:注文</u>" as order1 {
+注文日=11月21日
+数量=2
+}
+object "<u>注文情報:注文</u>" as order2 {
+注文日=11月21日
+数量=1
+}
+object "<u>注文情報:注文</u>" as order3 {
+注文日=12月23日
+数量=1
+}
+object "<u>注文情報:注文</u>" as order4 {
+注文日=12月30日
+数量=0
+}
+importuser -- user1
+user1 -- product1
+user1 -- product2
+user2 -- product2
+user3 -- product3
+product1 -- order1
+product2 -- order2
+product2 -- order3
+product3 -- order4
+
 @enduml

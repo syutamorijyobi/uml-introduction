@@ -1,11 +1,20 @@
 @startuml kuruma
 left to right direction
-object "<u>資格取得申請:資格</u>" as  a{
-名称
-日付
+object "<u>資格申請:資格</u>" as  a{
+名称=情報処理安全確保支援士
+日付=2020年10月21日
 }
-object "<u>社員情報:社員</u>" as b {
-氏名
+object "<u>利用者:社員</u>" as b {
+氏名=高橋洋平
 }
-a -- b
+object "<u>利用者:社員</u>" as c {
+氏名=樋口正之
+}
+object "<u>資格申請:資格</u>" as  d{
+名称=LinuC試験Level1
+日付=2021年3月28日
+}
+b -- a
+c -- a
+b -- d
 @enduml
