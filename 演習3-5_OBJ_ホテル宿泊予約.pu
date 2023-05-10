@@ -28,8 +28,9 @@ object "<u>B:利用者</u>" as b {
 }
 a -- ro
 b -- ro
-ro -- hotel 
+ro -- hotel
+
 hotel -- roominfo1
 hotel -- roominfo3
-
+hotel -- roominfo2
 @enduml
