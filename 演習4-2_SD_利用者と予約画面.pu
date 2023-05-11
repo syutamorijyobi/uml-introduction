@@ -1,6 +1,13 @@
 @startuml ラーメンの注文
 hide footbox
-participant ":利用者クラス" as user
-participant ":予約画面クラス" as will
+participant "user:利用者" as user
+participant ":予約画面" as will
 
+activate user
+user ->> will:ログインする()
+activate will
+will -> will: 認証()
+activate will
+deactivate user
+deactivate will
 @enduml

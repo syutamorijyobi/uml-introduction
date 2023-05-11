@@ -1,0 +1,15 @@
+@startuml data
+hide footbox
+participant "controller:データ更新コントローラ" as controller
+participant "hotel:ホテル" as hotel 
+participant "予約:" as will
+activate controller
+controller ->> hotel :予約()
+activate hotel
+create will
+hotel ->> will :生成() <<create>>
+hotel -> hotel :予約登録()
+activate hotel
+deactivate hotel
+deactivate controller
+@enduml

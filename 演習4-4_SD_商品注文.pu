@@ -1,0 +1,24 @@
+@startuml order
+hide footbox
+actor "受注係" as user
+participant "boundary:注文登録画面" as boundary <<boundary>>
+participant "entity:商品" as entity1 <<entity>>
+participant "entity:注文:" as entity2 <<entity>>
+
+activate user
+user -> boundary:商品情報確認()
+activate boundary
+activate entity1
+boundary -> entity1:商品情報取得()
+entity1 -->> boundary:商品情報を返す
+deactivate entity1
+boundary -> boundary:商品情報表示(商品情報)
+activate boundary
+deactivate boundary
+deactivate boundary
+user -> boundary:
+activate boundary
+create entity2
+boundary -->> entity2:商品登録(注文情報) <<create>>
+deactivate user
+@enduml
