@@ -1,0 +1,17 @@
+@startuml web
+hide footbox
+actor "ユーザ" as user
+participant ":ブラウザ" as boundary
+participant ":Webサーバー" as webserver 
+participant ":画像サーバー" as fotserver
+
+activate user
+activate boundary
+user -> boundary
+boundary ->webserver
+activate webserver
+webserver -> fotserver
+activate fotserver
+boundary -> user
+deactivate user
+@enduml
