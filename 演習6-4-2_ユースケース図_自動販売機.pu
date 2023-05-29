@@ -1,0 +1,12 @@
+@startuml 演習2-1
+left to right direction
+actor 客#DDDDDD;line:black;line.bold;
+actor ベンダー#DDDDDD;line:black;line.bold;
+rectangle 自動販売機 {
+usecase お金を入れる 
+usecase ボタンを押す 
+usecase 商品を出す
+}
+客-->お金を入れる
+客-->ボタンを押す
+客-->商品を出す

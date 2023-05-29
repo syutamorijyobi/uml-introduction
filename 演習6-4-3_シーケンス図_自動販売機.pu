@@ -1,0 +1,9 @@
+@startuml 自販機
+hide footbox
+Actor 客 as guest
+participant ":料金装置" as price
+participant ":ボタン" as Bboton
+participant ":ベンダー装置" as bender
+
+
+@enduml

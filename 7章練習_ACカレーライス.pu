@@ -1,0 +1,23 @@
+@startuml カレーライス
+title カレーライス
+start
+fork
+    fork
+        :玉ねぎを切る;
+    fork again 
+        :ジャガイモを切る;
+    fork again
+        :ニンジンを切る;
+    fork again
+        :牛肉を切る;
+    end fork
+    :切った具材を炒める;
+    :水を入れる;
+    :カレールーを入れる;
+    fork again
+    :お米を洗う;
+    :ご飯を炊く;
+end fork
+:盛り付ける;
+stop
+@enduml
