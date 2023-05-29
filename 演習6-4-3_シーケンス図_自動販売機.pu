@@ -2,8 +2,22 @@
 hide footbox
 Actor 客 as guest
 participant ":料金装置" as price
-participant ":ボタン" as Bboton
+participant ":ボタン" as boton
 participant ":ベンダー装置" as bender
-
-
+activate guest
+guest -> price :お金を入れる
+activate price
+price -> boton : お金を入ったことを伝える
+activate boton
+activate bender
+guest->boton :ボタンを押す
+boton ->bender:ボタンで押されたドリンクを伝える
+bender ->bender :ドリンクを出す
+bender -->> boton :ドリンク
+boton -->> price : ドリンク
+price -->> guest: ドリンク
+deactivate bender
+deactivate boton
+deactivate price
+deactivate guest
 @enduml
