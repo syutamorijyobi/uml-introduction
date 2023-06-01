@@ -1,0 +1,13 @@
+@startuml ライントレーサーユースケース図
+' left to right direction
+actor 客#DDDDDD;line:black;line.bold;
+actor 左右モータ#DDDDDD;line:black;line.bold;
+actor 光センサー#DDDDDD;line:black;line.bold;
+
+rectangle ライントレーサー {
+usecase ラインの境界線上を進む as li
+}
+客 -right-> li
+左右モータ -left-> li
+光センサー -up->li
+@enduml
