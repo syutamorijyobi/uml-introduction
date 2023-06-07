@@ -1,44 +1,44 @@
 @startuml
-object 注文{
+class 注文{
     合計
 }
-object 注文詳細{
+class 注文詳細{
     数量
     小計
 }
-object 割引クーポン{
+class 割引クーポン{
 値引額
 期限
 }
-object 商品{
+class 商品{
     名称
     単価
 }
-object ドリンク{
+class ドリンク{
     種別
 }
-object カップ{
+class カップ{
     サイズ
 }
-object フード{
+class フード{
 }
-object レシピ{
+class レシピ{
 }
-object 材料 {
+class 材料 {
 }
-object ハンバーガー{
+class ハンバーガー{
     種別
 }
-object ポテト{
+class ポテト{
     サイズ
 }
-object パン{
+class パン{
 }
-object 肉{
+class 肉{
 }
-object 野菜{
+class 野菜{
 }
-object チーズ{
+class チーズ{
 }
 パン -up-|>材料
 肉 -up-|>材料
